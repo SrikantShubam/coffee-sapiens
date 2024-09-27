@@ -63,9 +63,9 @@ function Newsletter() {
           />
           <p className="mt-4 text-sm text-[#94a3b8]">
             We care about the protection of your data.{' '}
-            <a href="#" className="text-black underline">
+            <Link className="text-black underline">
               Read our Privacy Policy
-            </a>
+            </Link>
             .
           </p>
         </div>
