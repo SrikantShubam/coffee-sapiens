@@ -3,7 +3,7 @@ import { graphql, Link } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { renderRichText } from 'gatsby-source-contentful/rich-text'
 import { BLOCKS } from '@contentful/rich-text-types'
-import { FacebookShareButton, LinkedinShareButton, TwitterShareButton, FacebookIcon, LinkedinIcon, TwitterIcon } from 'react-share'
+
 import Navbar from '../components/Navbar'
 import { Share2, Facebook, Twitter, Linkedin, Copy, Check } from 'lucide-react';
 import Footer from '../components/footer'
