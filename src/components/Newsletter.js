@@ -1,7 +1,8 @@
 
 import React, { useState } from 'react';
 import MailchimpSubscribe from "react-mailchimp-subscribe";
-
+import {Link}  from 'gatsby';
+import PrivacyPolicy from '../pages/PrivacyPolicy';
 function Newsletter() {
   const [email, setEmail] = useState('');
   console.log('data',process.env.GATSBY_MAILCHIMP_U)
@@ -63,9 +64,10 @@ function Newsletter() {
           />
           <p className="mt-4 text-sm text-[#94a3b8]">
             We care about the protection of your data.{' '}
-            <Link className="text-black underline">
-              Read our Privacy Policy
-            </Link>
+            <Link to="/PrivacyPolicy" className="text-black underline">
+            Read our Privacy Policy
+          </Link>
+          
             .
           </p>
         </div>

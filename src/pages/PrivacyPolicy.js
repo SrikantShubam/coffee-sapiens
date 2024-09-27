@@ -1,6 +1,6 @@
 import React from "react"
-import Navbar from "./Navbar"
-import Footer from "./footer"
+import Navbar from "../components/Navbar"
+import Footer from "../components/footer"
 const PrivacyPolicy = () => {
   return (
     <>
@@ -34,7 +34,7 @@ const PrivacyPolicy = () => {
         <p className="mb-4">
           We may update this Privacy Policy from time to time. Any changes will be posted on this page.
         </p>
-        <p className="mb-4">Last updated: [Insert Date]</p>
+        <p className="mb-4">Last updated: 2024</p>
       </div>
     </div>
     <Footer/>
