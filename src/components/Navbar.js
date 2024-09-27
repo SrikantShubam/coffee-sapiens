@@ -29,7 +29,7 @@ const Navbar = () => {
           <div className="hidden md:flex space-x-8">
             <a href="/" className="font-roboto text-xl text-black hover:text-secondary no-underline">Home</a>
             
-            <a href="#" className="font-roboto text-xl text-black hover:text-secondary no-underline">Blog</a>
+            <Link to="/blogpage" className="font-roboto text-xl text-black hover:text-secondary no-underline">Blog</Link>
             <a href="#" className="font-roboto text-xl font-regular text-black hover:text-secondary no-underline">About</a>
           </div>
 
