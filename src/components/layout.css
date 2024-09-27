@@ -222,3 +222,106 @@ pre tt:before,
 pre tt:after {
   content: none;
 }
+
+
+
+
+
+/*stuff for the custom things */
+
+.custom-socials {
+  background-color: white;
+  border: #D19364 2px solid;
+  border-radius: 50%;  /* Ensures the circle shape */
+  padding: 10px;       /* Adjusted padding for better spacing */
+  margin: 0 10px;
+  box-sizing: border-box;
+  text-align: center;
+  display: inline-flex; /* Ensures the icon is centered */
+  justify-content: center;
+  align-items: center;
+  width: 35px;         /* Set width for the circle */
+  height: 35px;        /* Set height for the circle */
+  position: relative;
+  transition: all 0.3s ease; /* Optional: for smooth transitions */
+}
+.custom-socials:hover,.custom-socials:focus{
+  background-color: #D19364;
+  color: white;
+}
+
+body{
+  margin-left:75px ;
+  margin-right: 75px;
+}
+footer {
+  margin-left: -75px;  /* Counteract the specific body margin */
+  margin-right: -75px; /* Counteract the specific body margin */
+  width: calc(100% + 150px); /* Adjust the width to compensate for the negative margins */
+}
+/* Add this in your styles.css */
+.custom-slider .slick-slide > div {
+  width: 100%; /* Ensure each slide element takes full width */
+  display: flex;
+  justify-content: between;
+}
+.img-d{
+  max-width: 400px!important;
+
+}
+.img-d2{
+  max-height: 350px!important;
+
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media(max-width:750px){
+  body{
+    margin-left:12px ;
+    margin-right: 12px;
+
+  }
+  footer {
+    margin-left: -12px;  /* Counteract the specific body margin */
+    margin-right: -12px; /* Counteract the specific body margin */
+    width: calc(100% + 24px); /* Adjust the width to compensate for the negative margins */
+}
+  .img-d{
+    max-width: 400px!important;
+    max-height: 250px;
+  
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+
+
+}
+@media (min-width: 1024px) and (max-width: 1311px) {
+  body{
+
+    margin-left:12px ;
+  margin-right: 12px;
+  }
+  footer {
+    margin-left: -12px;  /* Counteract the specific body margin */
+    margin-right: -12px; /* Counteract the specific body margin */
+    width: calc(100% + 24px); /* Adjust the width to compensate for the negative margins */
+}
+  .img-movement{
+    top: 50px;
+  }
+  
+}

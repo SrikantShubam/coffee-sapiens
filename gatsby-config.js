@@ -1,43 +1,48 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/
- */
+require("dotenv").config();
 
-/**
- * @type {import('gatsby').GatsbyConfig}
- */
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: "Coffee Sapiens",
+    description: "Welcome to coffee life by anagh pal and friends",
+    siteUrl: `https://www.yourdomain.tld`,
+    image: `src/images/logo.jpg`, // Path to your default image
+    twitterUsername: "@yourtwitterhandle",
   },
   plugins: [
-    `gatsby-plugin-image`,
+    `gatsby-plugin-postcss`,
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        fonts: [
+          'Inter:400,500,600,700', // weights for Inter font
+          'Roboto:400,500,700',    // weights for Roboto font
+          'Righteous:400'          // single weight for Righteous
+        ],
+        display: 'swap',
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Coffee Sapiens`,
+        short_name: `Coffee Sapiens`,
         start_url: `/`,
-        background_color: `#663399`,
-        // This will impact how browsers show your PWA/website
-        // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        background_color: `#ffffff`,
+        theme_color: `#000000`,
+        display: `standalone`,
+        icon: `src/images/logo.jpg`, // Path to your favicon file
       },
     },
+   
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
   ],
-}
+};

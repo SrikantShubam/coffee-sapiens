@@ -1,15 +1,20 @@
-import * as React from "react"
+import * as React from "react";
+import { Link } from "gatsby";
+import coffeeCupImage from '../images/coffee-cup-3d-404.webp'; // Update the path to where your image is stored
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+const NotFoundPage = () => {
+  return (
+    <div className="flex items-center justify-center h-screen ">
+      <div className="text-center">
+        <img src={coffeeCupImage} alt="Coffee Cup" className="mx-auto" />
+        <h1 className="mt-6 text-3xl font-semibold font-righteous">SEEMS LIKE YOU GOT LOST :(</h1>
+        <p className="mt-2 text-lg font-inter">404 Error. The page you're looking for does not exist.</p>
+        <Link to="/" className="mt-4 inline-block px-6 py-2 text-white bg-secondary rounded-full hover:bg-gray-900">
+          HEAD BACK HOME
+        </Link>
+      </div>
+    </div>
+  );
+};
 
-const NotFoundPage = () => (
-  <Layout>
-    <h1>404: Not Found</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </Layout>
-)
-
-export const Head = () => <Seo title="404: Not Found" />
-
-export default NotFoundPage
+export default NotFoundPage;
